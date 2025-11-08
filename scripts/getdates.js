@@ -1,7 +1,6 @@
 
-// Dynamically display current year
-const currentYear = new Date().getFullYear();
-document.getElementById("currentyear").textContent = currentYear;
+// Display current year dynamically
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// Display last modified date
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+// Display last modified date dynamically
+document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
