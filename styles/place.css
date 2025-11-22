@@ -1,4 +1,3 @@
-
 /* -------------------------
    GLOBAL VARIABLES
 -------------------------- */
@@ -70,9 +69,18 @@ footer {
     margin-top: 0;
     margin-bottom: 0.6rem;
     border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-/* WEATHER HEADING : pseudo-element for large view */
+/* SVG ICON — MOBILE VIEW */
+.weather-svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* DESKTOP ICON (emoji) */
 .weather-heading::after {
     content: "⛅";
     margin-left: 6px;
@@ -85,7 +93,6 @@ footer {
     left: 5%;
 }
 
-/* MOVE WEATHER BOX TO BOTTOM RIGHT */
 .weather-box {
     bottom: 10%;
     right: 5%;
@@ -100,16 +107,28 @@ footer {
         padding: 0.8rem;
     }
 
+    /* Hide desktop emoji icon */
     .weather-heading::after {
-        display: none; /* hide ⛅ icon on mobile */
+        display: none;
+    }
+
+    /* Show SVG icon */
+    .weather-svg {
+        display: inline-block;
     }
 }
 
 /* -------------------------
-   LARGE VIEW
+   LARGE VIEW (DESKTOP)
 -------------------------- */
 @media (min-width: 701px) {
+
+    /* Hide SVG and show emoji */
+    .weather-svg {
+        display: none;
+    }
+
     .weather-heading::after {
-        display: inline-block; /* show ⛅ icon */
+        display: inline-block;
     }
 }

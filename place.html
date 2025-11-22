@@ -1,9 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Required meta tags -->
+    <meta name="description" content="Discover Zimbabwe – A land of beauty, culture, wildlife, and adventure. Explore facts, weather, and highlights of this spectacular African destination.">
+    <meta name="author" content="Pulckcedes M.">
+
     <title>Discover Zimbabwe</title>
 
     <link rel="stylesheet" href="styles/place.css">
@@ -11,40 +15,50 @@
 </head>
 
 <body>
+
     <header>
         <h1>Zimbabwe</h1>
         <p class="tagline">A Land of Beauty, Culture & Adventure</p>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <main>
 
-        <picture>
-            <source srcset="images/zimbabwe-large.webp" media="(min-width: 700px)">
-            <img src="images/zimbabwe-small.webp" alt="Victoria Falls Landscape">
-        </picture>
+        <!-- HERO SECTION -->
+        <section class="hero">
 
-        <!-- FACTS BOX -->
-        <div class="facts-box info-box">
-            <h2 class="box-title">Facts</h2>
-            <ul>
-                <li>Capital: Harare</li>
-                <li>Population: 16.5 million</li>
-                <li>Famous for: Victoria Falls</li>
-                <li>Currency: Zimbabwean Dollar (ZWL)</li>
-            </ul>
-        </div>
+            <picture>
+                <source srcset="images/zimbabwe-large.webp" media="(min-width: 700px)">
+                <img src="images/zimbabwe-small.webp" alt="Victoria Falls Landscape">
+            </picture>
 
-        <!-- WEATHER BOX -->
-        <div class="weather-box info-box">
-            <h2 class="box-title weather-heading">Weather</h2>
+            <!-- FACTS BOX -->
+            <div class="facts-box info-box">
+                <h2 class="box-title">Facts</h2>
+                <ul>
+                    <li>Capital: Harare</li>
+                    <li>Population: 16.5 million</li>
+                    <li>Famous for: Victoria Falls</li>
+                    <li>Currency: Zimbabwean Dollar (ZWL)</li>
+                </ul>
+            </div>
 
-            <p>Temperature: <span id="temp">18</span> °C</p>
-            <p>Wind Speed: <span id="wind">10</span> km/h</p>
-            <p>Wind Chill: <span id="windchill">N/A</span></p>
-        </div>
+            <!-- WEATHER BOX -->
+            <div class="weather-box info-box">
 
-    </section>
+                <!-- SVG weather icon for mobile view -->
+                <h2 class="box-title weather-heading">
+                    <img src="images/weather.svg" class="weather-svg" alt="Weather Icon">
+                    Weather
+                </h2>
+
+                <p>Temperature: <span id="temp">18</span> °C</p>
+                <p>Wind Speed: <span id="wind">10</span> km/h</p>
+                <p>Wind Chill: <span id="windchill">N/A</span></p>
+            </div>
+
+        </section>
+
+    </main>
 
     <footer>
         <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
