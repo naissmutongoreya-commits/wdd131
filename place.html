@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,29 +22,30 @@
             <img src="images/zimbabwe-small.webp" alt="Victoria Falls Landscape" />
         </picture>
 
-        <!-- FACTS BOX (top-left) -->
-        <section class="data">
-            <h2>Facts</h2>
+        <!-- FACTS BOX positioned on image -->
+        <div class="facts-box">
             <ul>
                 <li>Capital: Harare</li>
                 <li>Population: 16.5 million</li>
                 <li>Famous for: Victoria Falls</li>
                 <li>Currency: Zimbabwean Dollar (ZWL)</li>
             </ul>
-        </section>
+        </div>
 
-        <!-- WEATHER BOX (bottom-right) -->
-        <section class="weather">
-            <h2>Weather</h2>
+        <!-- WEATHER BOX positioned on image -->
+        <div class="weather-box">
+            <img class="weather-icon-mobile" src="images/weather.svg" alt="Weather Icon" />
 
-            <div class="weather-box">
-                <img class="weather-icon-mobile" src="images/weather.svg" alt="Weather Icon">
+            <p>Temperature: <span id="temp">18</span> °C</p>
+            <p>Wind Speed: <span id="wind">10</span> km/h</p>
+            <p>Wind Chill: <span id="windchill"></span></p>
+        </div>
+    </section>
 
-                <p>Temperature: <span id="temp">18</span> °C</p>
-                <p>Wind Speed: <span id="wind">10</span> km/h</p>
-                <p>Wind Chill: <span id="windchill"></span></p>
-            </div>
-        </section>
+    <!-- HEADINGS OUTSIDE HERO for clarity -->
+    <section class="labels">
+        <h2 class="facts-heading">Facts</h2>
+        <h2 class="weather-heading">Weather</h2>
     </section>
 
     <footer>

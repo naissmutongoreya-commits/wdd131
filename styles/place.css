@@ -1,10 +1,11 @@
-/* =========================================
+
+/*=========================================
    GLOBAL SETTINGS
 ========================================= */
 :root {
-    --primary: #006400;     /* Dark green */
+    --primary: #006400;
     --secondary: #f4f4f4;
-    --accent: #c8102e;      /* Red (Flag color) */
+    --accent: #c8102e;
     --text-dark: #222;
     --text-light: #fff;
     --padding: 1rem;
@@ -21,15 +22,10 @@ body {
    HEADER
 ========================================= */
 header {
-    text-align: center;
     background: var(--primary);
     color: var(--text-light);
+    text-align: center;
     padding: var(--padding);
-}
-
-.tagline {
-    margin-top: -10px;
-    font-style: italic;
 }
 
 /* =========================================
@@ -45,62 +41,67 @@ header {
 }
 
 /* =========================================
-   FACTS SECTION (top-left)
+   FACTS & WEATHER HEADINGS (outside hero)
 ========================================= */
-.data {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    max-width: 240px;
-    z-index: 3;
+.labels {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
 }
 
-.data h2 {
+.facts-heading {
     color: var(--primary);
 }
 
-.data ul {
-    background: white;
-    padding: var(--padding);
-    border-radius: 8px;
-}
-
-/* =========================================
-   WEATHER SECTION (bottom-right)
-========================================= */
-.weather h2 {
+.weather-heading {
     color: var(--accent);
 }
 
-/* Desktop pseudo-element emoji */
-@media (min-width: 700px) {
-    .weather h2::after {
-        content: " ⛅";
-        font-size: 1.5rem;
-        color: var(--accent);
-    }
-}
-
-.weather-box {
+/* =========================================
+   FACTS BOX (TOP LEFT)
+========================================= */
+.facts-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 220px;
     background: white;
     padding: var(--padding);
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* =========================================
+   WEATHER BOX (BOTTOM RIGHT)
+========================================= */
+.weather-box {
     position: absolute;
     bottom: 20px;
     right: 20px;
     max-width: 180px;
+    background: white;
+    padding: var(--padding);
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-/* Mobile SVG icon */
+/* MOBILE SVG weather icon */
 .weather-icon-mobile {
     width: 40px;
     display: block;
 }
 
+/* DESKTOP pseudo-element icon */
 @media (min-width: 700px) {
     .weather-icon-mobile {
         display: none;
+    }
+
+    .weather-heading::after {
+        content: " ⛅";
+        color: var(--accent);
+        font-size: 1.5rem;
+        margin-left: 5px;
     }
 }
 
@@ -108,8 +109,8 @@ header {
    FOOTER
 ========================================= */
 footer {
-    text-align: center;
     background: var(--primary);
     color: var(--text-light);
+    text-align: center;
     padding: 1rem;
 }
