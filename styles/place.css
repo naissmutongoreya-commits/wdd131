@@ -2,17 +2,17 @@
    GLOBAL SETTINGS
 ========================================= */
 :root {
-    --primary: #006400;   /* Dark green */
+    --primary: #006400;     /* Dark green */
     --secondary: #f4f4f4;
-    --accent: #c8102e;    /* Red from Zimbabwe flag */
+    --accent: #c8102e;      /* Red (Flag color) */
     --text-dark: #222;
     --text-light: #fff;
     --padding: 1rem;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: Arial, sans-serif;
     background: var(--secondary);
     color: var(--text-dark);
 }
@@ -21,9 +21,9 @@ body {
    HEADER
 ========================================= */
 header {
+    text-align: center;
     background: var(--primary);
     color: var(--text-light);
-    text-align: center;
     padding: var(--padding);
 }
 
@@ -33,31 +33,50 @@ header {
 }
 
 /* =========================================
-   HERO
+   HERO SECTION
 ========================================= */
+.hero {
+    position: relative;
+}
+
 .hero img {
     width: 100%;
-    height: auto;
     display: block;
 }
 
 /* =========================================
-   WEATHER SECTION
+   FACTS SECTION (top-left)
 ========================================= */
-.weather {
+.data {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 240px;
+    z-index: 3;
+}
+
+.data h2 {
+    color: var(--primary);
+}
+
+.data ul {
+    background: white;
     padding: var(--padding);
+    border-radius: 8px;
 }
 
+/* =========================================
+   WEATHER SECTION (bottom-right)
+========================================= */
 .weather h2 {
-    position: relative;
+    color: var(--accent);
 }
 
-/* DESKTOP: pseudo-element weather icon */
+/* Desktop pseudo-element emoji */
 @media (min-width: 700px) {
     .weather h2::after {
-        content: "⛅";
-        margin-left: 10px;
-        font-size: 1.8rem;
+        content: " ⛅";
+        font-size: 1.5rem;
         color: var(--accent);
     }
 }
@@ -65,9 +84,15 @@ header {
 .weather-box {
     background: white;
     padding: var(--padding);
-    border-radius: 6px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    max-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
+/* Mobile SVG icon */
 .weather-icon-mobile {
     width: 40px;
     display: block;
@@ -80,28 +105,11 @@ header {
 }
 
 /* =========================================
-   DATA SECTION
-========================================= */
-.data {
-    padding: var(--padding);
-}
-
-.data ul {
-    background: white;
-    padding: var(--padding);
-    border-radius: 6px;
-}
-
-li {
-    margin-bottom: 0.6rem;
-}
-
-/* =========================================
    FOOTER
 ========================================= */
 footer {
+    text-align: center;
     background: var(--primary);
     color: var(--text-light);
-    text-align: center;
     padding: 1rem;
 }

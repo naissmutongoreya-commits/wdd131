@@ -1,12 +1,12 @@
-// ===============================
+// ======================================
 // FOOTER YEAR & LAST MODIFIED
-// ===============================
+// ======================================
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// ===============================
+// ======================================
 // WIND CHILL FUNCTION
-// ===============================
+// ======================================
 function calculateWindChill(tempC, speedKmh) {
     return (
         13.12 +
@@ -16,16 +16,19 @@ function calculateWindChill(tempC, speedKmh) {
     );
 }
 
-// ===============================
-// WIND CHILL LOGIC
-// ===============================
+// ======================================
+// STATIC WEATHER VALUES
+// ======================================
 const temp = parseFloat(document.getElementById("temp").textContent);
 const wind = parseFloat(document.getElementById("wind").textContent);
-let windchillOutput = document.getElementById("windchill");
+const windchill = document.getElementById("windchill");
 
-// VALID CONDITIONS
+// ======================================
+// VALIDATION & CALCULATION
+// ======================================
 if (temp <= 10 && wind > 4.8) {
-    windchillOutput.textContent = calculateWindChill(temp, wind).toFixed(1) + " °C";
+    const wc = calculateWindChill(temp, wind);
+    windchill.textContent = wc.toFixed(1) + " °C";
 } else {
-    windchillOutput.textContent = "N/A";
+    windchill.textContent = "N/A";
 }
