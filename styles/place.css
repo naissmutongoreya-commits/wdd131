@@ -1,36 +1,45 @@
 
-/*=========================================
-   GLOBAL SETTINGS
-========================================= */
+/* -------------------------
+   GLOBAL VARIABLES
+-------------------------- */
 :root {
-    --primary: #006400;
-    --secondary: #f4f4f4;
-    --accent: #c8102e;
-    --text-dark: #222;
-    --text-light: #fff;
-    --padding: 1rem;
+    --primary-green: #0A8A0A;
+    --box-bg: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.25);
+    --font: Arial, sans-serif;
 }
 
+/* -------------------------
+   GENERAL
+-------------------------- */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: var(--secondary);
-    color: var(--text-dark);
+    font-family: var(--font);
 }
 
-/* =========================================
+/* -------------------------
    HEADER
-========================================= */
+-------------------------- */
 header {
-    background: var(--primary);
-    color: var(--text-light);
     text-align: center;
-    padding: var(--padding);
+    padding: 1.5rem;
+    background: var(--primary-green);
+    color: white;
 }
 
-/* =========================================
+/* -------------------------
+   FOOTER
+-------------------------- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-green);
+    color: white;
+}
+
+/* -------------------------
    HERO SECTION
-========================================= */
+-------------------------- */
 .hero {
     position: relative;
 }
@@ -40,77 +49,67 @@ header {
     display: block;
 }
 
-/* =========================================
-   FACTS & WEATHER HEADINGS (outside hero)
-========================================= */
-.labels {
-    display: flex;
-    justify-content: space-between;
-    padding: var(--padding);
+/* -------------------------
+   SHARED BOX STYLING
+-------------------------- */
+.info-box {
+    position: absolute;
+    background: var(--box-bg);
+    padding: 1rem;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow);
 }
 
-.facts-heading {
-    color: var(--primary);
+/* GREEN HEADING BAR */
+.box-title {
+    background: var(--primary-green);
+    color: white;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    border-radius: 6px;
 }
 
-.weather-heading {
-    color: var(--accent);
+/* WEATHER HEADING : pseudo-element for large view */
+.weather-heading::after {
+    content: "⛅";
+    margin-left: 6px;
+    display: none; /* hidden on mobile */
 }
 
-/* =========================================
-   FACTS BOX (TOP LEFT)
-========================================= */
+/* --- BOX POSITIONS --- */
 .facts-box {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    max-width: 220px;
-    background: white;
-    padding: var(--padding);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    top: 10%;
+    left: 5%;
 }
 
-/* =========================================
-   WEATHER BOX (BOTTOM RIGHT)
-========================================= */
+/* MOVE WEATHER BOX TO BOTTOM RIGHT */
 .weather-box {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    max-width: 180px;
-    background: white;
-    padding: var(--padding);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    bottom: 10%;
+    right: 5%;
 }
 
-/* MOBILE SVG weather icon */
-.weather-icon-mobile {
-    width: 40px;
-    display: block;
-}
-
-/* DESKTOP pseudo-element icon */
-@media (min-width: 700px) {
-    .weather-icon-mobile {
-        display: none;
+/* -------------------------
+   MOBILE STYLES
+-------------------------- */
+@media (max-width: 700px) {
+    .info-box {
+        width: 150px;
+        padding: 0.8rem;
     }
 
     .weather-heading::after {
-        content: " ⛅";
-        color: var(--accent);
-        font-size: 1.5rem;
-        margin-left: 5px;
+        display: none; /* hide ⛅ icon on mobile */
     }
 }
 
-/* =========================================
-   FOOTER
-========================================= */
-footer {
-    background: var(--primary);
-    color: var(--text-light);
-    text-align: center;
-    padding: 1rem;
+/* -------------------------
+   LARGE VIEW
+-------------------------- */
+@media (min-width: 701px) {
+    .weather-heading::after {
+        display: inline-block; /* show ⛅ icon */
+    }
 }

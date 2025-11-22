@@ -1,5 +1,6 @@
 
-html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,13 +18,15 @@ html lang="en">
 
     <!-- HERO SECTION -->
     <section class="hero">
+
         <picture>
             <source srcset="images/zimbabwe-large.webp" media="(min-width: 700px)">
-            <img src="images/zimbabwe-small.webp" alt="Victoria Falls Landscape" />
+            <img src="images/zimbabwe-small.webp" alt="Victoria Falls Landscape">
         </picture>
 
-        <!-- FACTS BOX positioned on image -->
-        <div class="facts-box">
+        <!-- FACTS BOX -->
+        <div class="facts-box info-box">
+            <h2 class="box-title">Facts</h2>
             <ul>
                 <li>Capital: Harare</li>
                 <li>Population: 16.5 million</li>
@@ -32,24 +35,20 @@ html lang="en">
             </ul>
         </div>
 
-        <!-- WEATHER BOX positioned on image -->
-        <div class="weather-box">
-            <img class="weather-icon-mobile" src="images/weather.svg" alt="Weather Icon" />
+        <!-- WEATHER BOX -->
+        <div class="weather-box info-box">
+            <h2 class="box-title weather-heading">Weather</h2>
 
             <p>Temperature: <span id="temp">18</span> °C</p>
             <p>Wind Speed: <span id="wind">10</span> km/h</p>
-            <p>Wind Chill: <span id="windchill"></span></p>
+            <p>Wind Chill: <span id="windchill">N/A</span></p>
         </div>
-    </section>
 
-    <!-- HEADINGS OUTSIDE HERO for clarity -->
-    <section class="labels">
-        <h2 class="facts-heading">Facts</h2>
-        <h2 class="weather-heading">Weather</h2>
     </section>
 
     <footer>
         <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
     </footer>
+
 </body>
 </html>
