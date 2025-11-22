@@ -1,0 +1,107 @@
+/* =========================================
+   GLOBAL SETTINGS
+========================================= */
+:root {
+    --primary: #006400;   /* Dark green */
+    --secondary: #f4f4f4;
+    --accent: #c8102e;    /* Red from Zimbabwe flag */
+    --text-dark: #222;
+    --text-light: #fff;
+    --padding: 1rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--secondary);
+    color: var(--text-dark);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+header {
+    background: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: var(--padding);
+}
+
+.tagline {
+    margin-top: -10px;
+    font-style: italic;
+}
+
+/* =========================================
+   HERO
+========================================= */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   WEATHER SECTION
+========================================= */
+.weather {
+    padding: var(--padding);
+}
+
+.weather h2 {
+    position: relative;
+}
+
+/* DESKTOP: pseudo-element weather icon */
+@media (min-width: 700px) {
+    .weather h2::after {
+        content: "⛅";
+        margin-left: 10px;
+        font-size: 1.8rem;
+        color: var(--accent);
+    }
+}
+
+.weather-box {
+    background: white;
+    padding: var(--padding);
+    border-radius: 6px;
+}
+
+.weather-icon-mobile {
+    width: 40px;
+    display: block;
+}
+
+@media (min-width: 700px) {
+    .weather-icon-mobile {
+        display: none;
+    }
+}
+
+/* =========================================
+   DATA SECTION
+========================================= */
+.data {
+    padding: var(--padding);
+}
+
+.data ul {
+    background: white;
+    padding: var(--padding);
+    border-radius: 6px;
+}
+
+li {
+    margin-bottom: 0.6rem;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+}
