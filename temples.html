@@ -1,12 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta -->
+  <meta name="description" content="Temple Album showcasing nine LDS temples from around the world with images and captions.">
+  <meta name="author" content="Naison Mutongoreya">
+
   <title>Temple Album</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts with preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <!-- CSS Files -->
@@ -18,10 +24,8 @@
 </head>
 <body>
   <header>
-    <h1>Temple Album</h1>
-
+    <h2>Temple Album</h2> <!-- Change from h1 to h2 so <main> has the single h1 -->
     <button id="hamburger">☰</button>
-
     <nav id="nav-menu">
       <a href="#">Home</a>
       <a href="#">Old</a>
@@ -32,53 +36,44 @@
   </header>
 
   <main>
-    <h1>Temple Gallery</h1>
+    <h1>Temple Gallery</h1> <!-- Single h1 as required -->
 
-    <!-- 9 figure elements -->
     <div class="gallery">
       <figure>
-        <img src="images/abijan-nigeria-temple.jpeg" alt="Abijan Nigeria">
-        <figcaption>Abijan Nigeria</figcaption>
+        <img src="images/abijan-nigeria-temple.jpeg" alt="Abijan Nigeria Temple">
+        <figcaption>Abijan Nigeria Temple</figcaption>
       </figure>
-
       <figure>
-        <img src="images/bangkok-thailand-temple.jpeg" alt="Bangkok Thailand">
-        <figcaption>Bangkok Thailand</figcaption>
+        <img src="images/bangkok-thailand-temple.jpeg" alt="Bangkok Thailand Temple">
+        <figcaption>Bangkok Thailand Temple</figcaption>
       </figure>
-
       <figure>
-        <img src="images/buenos-aires-argentina.jpeg" alt="Buenos Aires Argentina">
-        <figcaption>Buenos Aires Argentina</figcaption>
+        <img src="images/buenos-aires-argentina.jpeg" alt="Buenos Aires Argentina Temple">
+        <figcaption>Buenos Aires Argentina Temple</figcaption>
       </figure>
-
       <figure>
-        <img src="images/brasilia-brazil-temple.jpeg" alt="Brasilia Brazil">
-        <figcaption>Brasilia Brazil</figcaption>
+        <img src="images/brasilia-brazil-temple.jpeg" alt="Brasilia Brazil Temple">
+        <figcaption>Brasilia Brazil Temple</figcaption>
       </figure>
-
       <figure>
-        <img src="images/laie-temple.jpeg" alt="laie Temple">
-        <figcaption>laie Temple</figcaption>
+        <img src="images/laie-temple.jpeg" alt="Laie Hawaii Temple">
+        <figcaption>Laie Hawaii Temple</figcaption>
       </figure>
-
       <figure>
-        <img src="images/germany.jpeg" alt="Frankie Germany">
-        <figcaption>Frankie Germany</figcaption>
+        <img src="images/germany.jpeg" alt="Frankfurt Germany Temple">
+        <figcaption>Frankfurt Germany Temple</figcaption>
       </figure>
-
       <figure>
-        <img src="images/feather-river-california.jpeg" alt="Feather River California">
-        <figcaption>Feather River California</figcaption>
+        <img src="images/feather-river-california.jpeg" alt="Feather River California Temple">
+        <figcaption>Feather River California Temple</figcaption>
       </figure>
-
       <figure>
-        <img src="images/layton-utah-temple.jpeg" alt="Layton Utah">
-        <figcaption>Layton Utah</figcaption>
+        <img src="images/layton-utah-temple.jpeg" alt="Layton Utah Temple">
+        <figcaption>Layton Utah Temple</figcaption>
       </figure>
-
       <figure>
-        <img src="images/fukuoka-japan-temple.jpeg" alt="Fukuoka Japan">
-        <figcaption>Fukuoka Japan</figcaption>
+        <img src="images/fukuoka-japan-temple.jpeg" alt="Fukuoka Japan Temple">
+        <figcaption>Fukuoka Japan Temple</figcaption>
       </figure>
     </div>
   </main>
@@ -87,6 +82,5 @@
     <p>&copy; <span id="year"></span> | Naison Mutongoreya</p>
     <p>Last Modified: <span id="last-modified"></span></p>
   </footer>
-
 </body>
 </html>
