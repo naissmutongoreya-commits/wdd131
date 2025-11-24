@@ -1,15 +1,36 @@
-@media only screen and (min-width: 32rem) {
-  #hamburger {
-    display: none;
-  }
 
-  nav {
-    display: flex !important;
-    flex-direction: row;
-    gap: 2rem;
-  }
+/* temples-large.css */
 
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
+@media (min-width: 768px) {
+header {
+padding: 1.5rem 3rem;
+}
+
+#nav-menu {
+display: flex;
+gap: 2rem;
+}
+
+#hamburger {
+display: none;
+}
+
+.gallery {
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+
+figure img {
+max-height: 350px;
+}
+}
+
+@media (min-width: 1024px) {
+.gallery {
+grid-template-columns: repeat(4, 1fr);
+}
+
+figure img {
+max-height: 400px;
+}
 }

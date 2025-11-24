@@ -1,19 +1,20 @@
-// copyright year
-document.querySelector("#year").textContent = new Date().getFullYear();
 
-// last modified
-document.querySelector("#last-modified").textContent = document.lastModified;
+// temples.js
+// Hamburger Menu Toggle
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-// hamburger toggle
-const hamBtn = document.querySelector("#hamburger");
-const navMenu = document.querySelector("#nav-menu");
 
-hamBtn.addEventListener("click", () => {
-  if (navMenu.style.display === "flex") {
-    navMenu.style.display = "none";
-    hamBtn.textContent = "☰";
-  } else {
-    navMenu.style.display = "flex";
-    hamBtn.textContent = "✖";
-  }
+hamburger.addEventListener("click", () => {
+navMenu.classList.toggle("open");
 });
+
+
+// Dynamic Year in Footer
+const yearSpan = document.getElementById("year");
+yearSpan.textContent = new Date().getFullYear();
+
+
+// Last Modified Date
+const lastModifiedSpan = document.getElementById("last-modified");
+lastModifiedSpan.textContent = document.lastModified;
