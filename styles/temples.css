@@ -16,7 +16,7 @@ body {
    =============================== */
 
 header {
-  background: #006b3c;  /* green */
+  background: #006b3c;  /* dark green */
   color: #ffffff;
   padding: 1rem;
   display: flex;
@@ -33,7 +33,7 @@ header {
   cursor: pointer;
 }
 
-/* Navigation (hidden on mobile) */
+/* Navigation (hidden on mobile by default) */
 nav {
   display: none;
   flex-direction: column;
@@ -62,7 +62,7 @@ nav a:focus {
    =============================== */
 
 main {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -81,15 +81,20 @@ main h1 {
   gap: 1.5rem;
 }
 
+/* Figure Styling */
 figure {
   background: white;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
 figure img {
   width: 100%;
+  height: auto;
+  max-height: 400px;  /* larger images */
+  object-fit: cover;
   border-radius: 10px;
   display: block;
 }
@@ -103,7 +108,7 @@ figcaption {
 }
 
 /* ===============================
-   FOOTER (Matches Header)
+   FOOTER
    =============================== */
 
 footer {
@@ -143,7 +148,25 @@ footer p {
     color: #ffffff;
   }
 
+  /* 3-column gallery */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  figure img {
+    max-height: 450px;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  /* 4-column gallery for very large screens */
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  figure img {
+    max-height: 500px;
   }
 }
