@@ -1,9 +1,9 @@
 
 /* ===============================
-   MEDIA QUERY: Large Screens
+   MEDIUM SCREENS (~768px)
    =============================== */
 
-@media only screen and (min-width: 32rem) {
+@media only screen and (min-width: 48rem) {
   /* Hide hamburger button */
   #hamburger {
     display: none;
@@ -19,29 +19,29 @@
     border-radius: 0;
   }
 
-  nav a {
-    color: #ffffff;
-  }
-
-  /* 3-column gallery */
+  /* 2-column gallery */
   .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
   figure img {
-    max-height: 450px;
+    max-height: 500px; /* slightly bigger images */
   }
 }
 
+/* ===============================
+   LARGE SCREENS (~1024px+)
+   =============================== */
+
 @media only screen and (min-width: 64rem) {
-  /* 4-column gallery for very large screens */
+  /* 3-column gallery */
   .gallery {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
 
   figure img {
-    max-height: 500px;
+    max-height: 550px; /* largest images */
   }
 }
