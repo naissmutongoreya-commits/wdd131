@@ -1,22 +1,47 @@
 
+/* ===============================
+   MEDIA QUERY: Large Screens
+   =============================== */
+
 @media only screen and (min-width: 32rem) {
+  /* Hide hamburger button */
+  #hamburger {
+    display: none;
+  }
+
+  /* Show nav horizontally */
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  nav a {
+    color: #ffffff;
+  }
+
+  /* 3-column gallery */
   .gallery {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 2rem;                             /* more space between images */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 
   figure img {
-    max-height: 450px; /* increase image height for desktop */
+    max-height: 450px;
   }
 }
 
 @media only screen and (min-width: 64rem) {
+  /* 4-column gallery for very large screens */
   .gallery {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
   }
 
   figure img {
-    max-height: 500px; /* extra large images for very large screens */
+    max-height: 500px;
   }
 }
