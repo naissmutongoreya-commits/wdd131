@@ -1,0 +1,47 @@
+
+/* ===============================
+   MEDIUM SCREENS (~768px)
+   =============================== */
+
+@media only screen and (min-width: 48rem) {
+  /* Hide hamburger button */
+  #hamburger {
+    display: none;
+  }
+
+  /* Show nav horizontally */
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  /* 2-column gallery */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  figure img {
+    max-height: 500px; /* slightly bigger images */
+  }
+}
+
+/* ===============================
+   LARGE SCREENS (~1024px+)
+   =============================== */
+
+@media only screen and (min-width: 64rem) {
+  /* 3-column gallery */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  figure img {
+    max-height: 550px; /* largest images */
+  }
+}
