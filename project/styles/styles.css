@@ -1,0 +1,44 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Merriweather', serif;
+    color: #065A82;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.color-box {
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.blue {
+    background-color: #065A82;
+}
+
+.green {
+    background-color: #4CAF50;
+}
+
+.wireframe {
+    border: 2px dashed #065A82;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    background: #fff;
+}
+
+section {
+    margin-bottom: 40px;
+}
