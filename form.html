@@ -1,92 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product Review Form for WDD131">
-    <meta name="author" content="Naison Mutongoreya">
-    <title>Product Review Form</title>
-
-    <link rel="stylesheet" href="styles/form.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Submit a detailed product review including rating, features, and installation details for quality feedback." />
+<title>Product Review Form</title>
+<link rel="stylesheet" href="form.css" />
+<script src="form.js" defer></script>
 </head>
 <body>
-
-<header>
-    <h1>Product Review Form</h1>
-</header>
-
 <main>
-    <form method="get" action="review.html" id="reviewForm">
+<h1>Product Review Form</h1>
+<form method="get" action="review.html">
 
-        <!-- PRODUCT NAME -->
-        <label for="product">Product Name</label>
-        <select id="product" name="product" required>
-            <option value="" disabled selected>Select a Product ...</option>
-            <!-- JS will insert options here -->
-        </select>
 
-        <!-- RATING -->
-        <fieldset>
-            <legend>Overall Rating</legend>
+<label for="product">Product Name</label>
+<select id="product" name="product" required>
+<option value="" disabled selected>Select a Product ...</option>
+</select>
 
-            <label>
-                <input type="radio" name="rating" value="1" required>
-                ☆
-            </label>
 
-            <label>
-                <input type="radio" name="rating" value="2" required>
-                ☆☆
-            </label>
+<fieldset>
+<legend>Overall Rating</legend>
+<label for="rate1"><input type="radio" id="rate1" name="rating" value="1" required> 1 ★</label>
+<label for="rate2"><input type="radio" id="rate2" name="rating" value="2"> 2 ★★</label>
+<label for="rate3"><input type="radio" id="rate3" name="rating" value="3"> 3 ★★★</label>
+<label for="rate4"><input type="radio" id="rate4" name="rating" value="4"> 4 ★★★★</label>
+<label for="rate5"><input type="radio" id="rate5" name="rating" value="5"> 5 ★★★★★</label>
+</fieldset>
 
-            <label>
-                <input type="radio" name="rating" value="3" required>
-                ☆☆☆
-            </label>
 
-            <label>
-                <input type="radio" name="rating" value="4" required>
-                ☆☆☆☆
-            </label>
+<label for="installDate">Date of Installation</label>
+<input type="date" id="installDate" name="installDate" required />
 
-            <label>
-                <input type="radio" name="rating" value="5" required>
-                ☆☆☆☆☆
-            </label>
-        </fieldset>
 
-        <!-- INSTALL DATE -->
-        <label for="installDate">Date of Installation</label>
-        <input type="date" id="installDate" name="installDate" required>
+<fieldset>
+<legend>Useful Features (Check all that apply)</legend>
+<label for="f1"><input type="checkbox" id="f1" name="features" value="durability"> Durability</label>
+<label for="f2"><input type="checkbox" id="f2" name="features" value="design"> Design</label>
+<label for="f3"><input type="checkbox" id="f3" name="features" value="performance"> Performance</label>
+<label for="f4"><input type="checkbox" id="f4" name="features" value="efficiency"> Efficiency</label>
+</fieldset>
 
-        <!-- USEFUL FEATURES -->
-        <fieldset>
-            <legend>Useful Features (check all that apply)</legend>
 
-            <label><input type="checkbox" name="features" value="durability"> Durability</label>
-            <label><input type="checkbox" name="features" value="design"> Design</label>
-            <label><input type="checkbox" name="features" value="battery"> Long Battery Life</label>
-            <label><input type="checkbox" name="features" value="compatibility"> Compatibility</label>
-        </fieldset>
+<label for="review">Written Review</label>
+<textarea id="review" name="review" rows="5" placeholder="Write your review here..."></textarea>
 
-        <!-- WRITTEN REVIEW -->
-        <label for="review">Written Review (optional)</label>
-        <textarea id="review" name="review" rows="4"></textarea>
 
-        <!-- USER NAME -->
-        <label for="userName">Your Name (optional)</label>
-        <input type="text" id="userName" name="userName">
+<label for="username">Your Name</label>
+<input type="text" id="username" name="username" />
 
-        <!-- SUBMIT -->
-        <input type="submit" value="Submit Review">
 
-    </form>
+<input type="submit" value="Submit Review" />
+</form>
 </main>
-
-<footer>
-    <p>&copy; 2025 | Naison Mutongoreya | WDD 131</p>
-</footer>
-
-<script src="scripts/form.js"></script>
 </body>
 </html>
