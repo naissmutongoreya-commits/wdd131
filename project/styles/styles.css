@@ -1,44 +1,137 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-}
 
-h1, h2 {
-    font-family: 'Merriweather', serif;
-    color: #065A82;
+/* ---------- GENERAL ---------- */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
+  background: #065A82;
+  padding: 15px;
+  color: white;
+  text-align: center;
 }
 
-.color-box {
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    margin: 10px 0;
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
 }
 
-.blue {
-    background-color: #065A82;
+nav a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-.green {
-    background-color: #4CAF50;
+nav a.active {
+  text-decoration: underline;
 }
 
-.wireframe {
-    border: 2px dashed #065A82;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    background: #fff;
+.hero {
+  position: relative;
 }
 
-section {
-    margin-bottom: 40px;
+.hero img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* ---------- HIGHLIGHTS ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ---------- DESTINATION GRID ---------- */
+.destination-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  gap: 20px;
+}
+
+.destination-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.destination-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ---------- FORM ---------- */
+.form-section {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #999;
+}
+
+button {
+  background: #4CAF50;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #065A82;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+footer a {
+  color: #90EE90;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (min-width: 750px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

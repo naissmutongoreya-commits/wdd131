@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Zimbabwe | Contact</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+<header>
+  <h1>Discover Zimbabwe</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="form-section">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="topic">What are you interested in?</label>
+      <select id="topic" name="topic" required>
+        <option value="">Select one...</option>
+        <option value="travel">Travel Information</option>
+        <option value="culture">Culture & Traditions</option>
+        <option value="wildlife">Wildlife</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="savedMessage" class="success"></p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Discover Zimbabwe</p>
+  <a href="references.html">Sources & References</a>
+</footer>
+<script src="scripts/script.js"></script>
+</body>
+</html>
