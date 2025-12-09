@@ -2,102 +2,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Submit a detailed product review including rating, installation date, useful features, and optional comments.">
-
-    <meta name="author" content="Naison Mutongoreya">
-    <title>Product Review Form</title>
-
-    <link rel="stylesheet" href="styles/form.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact us to submit travel inquiries or questions about visiting Zimbabwe.">
+  <meta name="author" content="Naison Mutongoreya">
+  <meta name="keywords" content="Zimbabwe, contact, form, travel inquiries">
+  <title>Contact | Discover Zimbabwe</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="images/favicon.ico">
 </head>
-<body>
 
+<body>
 <header>
-    <h1>Product Review Form</h1>
+  <h1>Discover Zimbabwe</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
-    <form method="get" action="review.html" id="reviewForm">
+  <section class="form-section">
+    <h2>Contact Us</h2>
 
-        <!-- PRODUCT NAME -->
-        <label for="product">Product Name</label>
-        <select id="product" name="product" required>
-            <option value="" disabled selected>Select a Product ...</option>
-        </select>
+    <form id="contactForm" action="thankyou.html" method="get">
+      <!-- Full Name -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
 
-        <!-- RATING -->
-        <fieldset>
-            <legend>Overall Rating</legend>
+      <!-- Email -->
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
 
-            <label for="rate1">
-                <input type="radio" id="rate1" name="rating" value="1" required>
-                ☆
-            </label>
+      <!-- Date of Travel -->
+      <label for="travelDate">Date of Travel</label>
+      <input type="date" id="travelDate" name="travelDate" required>
 
-            <label for="rate2">
-                <input type="radio" id="rate2" name="rating" value="2" required>
-                ☆☆
-            </label>
+      <!-- Topic selection (radio buttons) -->
+      <fieldset>
+        <legend>What are you interested in? (Choose one)</legend>
+        <label><input type="radio" name="topic" value="travel" required> Travel Information</label>
+        <label><input type="radio" name="topic" value="culture"> Culture & Traditions</label>
+        <label><input type="radio" name="topic" value="wildlife"> Wildlife</label>
+      </fieldset>
 
-            <label for="rate3">
-                <input type="radio" id="rate3" name="rating" value="3" required>
-                ☆☆☆
-            </label>
+      <!-- Additional Interests (checkboxes) -->
+      <fieldset>
+        <legend>Additional Interests (Select any)</legend>
+        <label><input type="checkbox" name="interests" value="food" required> Local Cuisine</label>
+        <label><input type="checkbox" name="interests" value="history"> Historical Sites</label>
+        <label><input type="checkbox" name="interests" value="adventure"> Adventure Activities</label>
+      </fieldset>
 
-            <label for="rate4">
-                <input type="radio" id="rate4" name="rating" value="4" required>
-                ☆☆☆☆
-            </label>
+      <!-- Message -->
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" required></textarea>
 
-            <label for="rate5">
-                <input type="radio" id="rate5" name="rating" value="5" required>
-                ☆☆☆☆☆
-            </label>
-        </fieldset>
-
-        <!-- INSTALL DATE -->
-        <label for="installDate">Date of Installation</label>
-        <input type="date" id="installDate" name="installDate" required>
-
-        <!-- USEFUL FEATURES -->
-        <fieldset>
-            <legend>Useful Features (check all that apply)</legend>
-
-            <label for="feat1">
-                <input type="checkbox" id="feat1" name="features" value="durability"> Durability
-            </label>
-
-            <label for="feat2">
-                <input type="checkbox" id="feat2" name="features" value="design"> Design
-            </label>
-
-            <label for="feat3">
-                <input type="checkbox" id="feat3" name="features" value="battery"> Long Battery Life
-            </label>
-
-            <label for="feat4">
-                <input type="checkbox" id="feat4" name="features" value="compatibility"> Compatibility
-            </label>
-        </fieldset>
-
-        <!-- WRITTEN REVIEW -->
-        <label for="review">Written Review (optional)</label>
-        <textarea id="review" name="review" rows="4"></textarea>
-
-        <!-- USER NAME -->
-        <label for="userName">Your Name (optional)</label>
-        <input type="text" id="userName" name="userName">
-
-        <input type="submit" value="Submit Review">
-
+      <button type="submit">Submit</button>
     </form>
+  </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 | Naison Mutongoreya | WDD 131</p>
+  <p>&copy; 2025 Discover Zimbabwe</p>
+  <a href="references.html">Sources & References</a>
 </footer>
-<script src="scripts/form.js" defer></script>
+
+<script src="scripts/script.js" defer></script>
 </body>
 </html>
